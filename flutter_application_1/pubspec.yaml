@@ -1,0 +1,53 @@
+name: flutter_application_1
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+
+dependencies:
+  audioplayers: ^6.0.0
+  flutter:
+    sdk: flutter
+  image: ^4.2.0
+  image_picker: ^1.1.2
+  signature: ^5.5.0
+  tflite_flutter: ^0.10.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/mnist.tflite
+    - assets/1.png
+    - assets/2.png
+    - assets/bir.jpg
+    - assets/iki.jpg
+    - assets/uc.jpg
+    - assets/dort.jpg
+    - assets/bes.jpg
+    - assets/alti.jpg
+    - assets/yedi.jpg
+    - assets/sekiz.jpg
+    - assets/dokuz.jpg
+    - assets/sifir.jpg
+    - assets/bir.mp3
+    - assets/iki.mp3
+    - assets/uc.mp3
+    - assets/dort.mp3
+    - assets/bes.mp3
+    - assets/alti.mp3
+    - assets/yedi.mp3
+    - assets/sekiz.mp3
+    - assets/dokuz.mp3
+    - assets/sifir.mp3
+    - assets/tekrardenemelisin.mp3
+    - assets/tebrikler.mp3
+    - assets/seviyenisec.mp3
+    - assets/surebitmeden.mp3
+    - assets/bildikleriniyaz.mp3
