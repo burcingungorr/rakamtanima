@@ -17,8 +17,7 @@ Bu uygulama, çocukların rakamları çizerek öğrenmelerini sağlarken aynı z
 - **Yapay Zeka Modeli Eğitimi**: [Python](https://www.python.org/), [TensorFlow](https://www.tensorflow.org/)
 - **Veri Tabanı**: [Firebase](https://firebase.google.com/)
 
-![bir](https://github.com/user-attachments/assets/62f3275d-88c7-4e6e-af5d-05a9bf2864ed)
-![iki](https://github.com/user-attachments/assets/b840e72d-ca0c-4484-998a-cbac5bc5a717)
+![bir](https://github.com/user-attachments/assets/62f3275d-88c7-4e6e-af5d-05a9bf2864ed) ![iki](https://github.com/user-attachments/assets/b840e72d-ca0c-4484-998a-cbac5bc5a717)
 ![üc](https://github.com/user-attachments/assets/c9ef8fb0-1052-48f9-ba8d-355c79387dae)
 ![alti](https://github.com/user-attachments/assets/36e828ba-a07b-4f18-b264-38bfadfebc6d)
 ![bes](https://github.com/user-attachments/assets/0de537f5-613d-4ce6-81d0-36c6cf2a962e)
