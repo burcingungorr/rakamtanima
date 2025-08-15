@@ -28,7 +28,6 @@ class _FirstLevelPageState extends State<FirstLevelPage> {
   void _startLevel() {
     int levelIndex = widget.level - 1;
 
-    // Check if levelIndex is out of bounds
     if (levelIndex >= MediaData.mediaList.length) {
       levelIndex = levelIndex % MediaData.mediaList.length;
     }

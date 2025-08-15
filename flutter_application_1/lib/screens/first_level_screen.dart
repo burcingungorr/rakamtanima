@@ -29,7 +29,7 @@ class _FirstLevelScreenState extends State<FirstLevelScreen> {
 
   String _prediction = '';
   Uint8List? _selectedImage;
-  Widget _icon = SizedBox.shrink();
+  Widget _icon = const SizedBox.shrink();
 
   @override
   void initState() {
@@ -45,7 +45,7 @@ class _FirstLevelScreenState extends State<FirstLevelScreen> {
   Future<void> _predictDigit() async {
     if (!_mlService.isModelLoaded) {
       setState(() {
-        _icon = SizedBox.shrink();
+        _icon = const SizedBox.shrink();
       });
       return;
     }
@@ -59,8 +59,8 @@ class _FirstLevelScreenState extends State<FirstLevelScreen> {
 
     if (_prediction == widget.correctNumber) {
       setState(() {
-        _icon =
-            Icon(Icons.sentiment_very_satisfied, color: Colors.green, size: 50);
+        _icon = const Icon(Icons.sentiment_very_satisfied,
+            color: Colors.green, size: 50);
       });
       await _audioService.playAudio(AudioFiles.tryAgain);
     }
@@ -73,7 +73,7 @@ class _FirstLevelScreenState extends State<FirstLevelScreen> {
       setState(() {
         _selectedImage = imageBytes;
         _prediction = '';
-        _icon = SizedBox.shrink();
+        _icon = const SizedBox.shrink();
       });
       _predictDigit();
     }
@@ -84,7 +84,7 @@ class _FirstLevelScreenState extends State<FirstLevelScreen> {
       _controller.clear();
       _selectedImage = null;
       _prediction = '';
-      _icon = SizedBox.shrink();
+      _icon = const SizedBox.shrink();
     });
   }
 
@@ -103,7 +103,7 @@ class _FirstLevelScreenState extends State<FirstLevelScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          SizedBox(height: 60),
+          const SizedBox(height: 60),
           NavigationButtons(
             onBack: _navigateBack,
             onDone: _predictDigit,
@@ -118,14 +118,14 @@ class _FirstLevelScreenState extends State<FirstLevelScreen> {
             Expanded(
               child: Image.memory(_selectedImage!),
             ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           _icon,
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
         color: AppConstants.primaryColor,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 6.0,
         child: Container(
           height: 40.0,
@@ -133,11 +133,11 @@ class _FirstLevelScreenState extends State<FirstLevelScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               IconButton(
-                icon: Icon(Icons.photo_library, color: Colors.white),
+                icon: const Icon(Icons.photo_library, color: Colors.white),
                 onPressed: () => _pickImage(ImageSource.gallery),
               ),
               IconButton(
-                icon: Icon(Icons.camera_alt, color: Colors.white),
+                icon: const Icon(Icons.camera_alt, color: Colors.white),
                 onPressed: () => _pickImage(ImageSource.camera),
               ),
             ],

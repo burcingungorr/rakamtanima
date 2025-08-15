@@ -28,7 +28,7 @@ class NavigationButtons extends StatelessWidget {
                 backgroundColor: AppConstants.primaryColor,
               ),
               onPressed: onBack,
-              child: Icon(Icons.arrow_back, color: Colors.white),
+              child: const Icon(Icons.arrow_back, color: Colors.white),
             ),
           if (showDone && onDone != null)
             ElevatedButton(
@@ -36,7 +36,7 @@ class NavigationButtons extends StatelessWidget {
                 backgroundColor: AppConstants.primaryColor,
               ),
               onPressed: onDone,
-              child: Icon(Icons.done, color: Colors.white),
+              child: const Icon(Icons.done, color: Colors.white),
             ),
           if (onClear != null)
             ElevatedButton(
@@ -44,7 +44,7 @@ class NavigationButtons extends StatelessWidget {
                 backgroundColor: AppConstants.primaryColor,
               ),
               onPressed: onClear,
-              child: Icon(Icons.clear, color: Colors.white),
+              child: const Icon(Icons.clear, color: Colors.white),
             ),
         ],
       ),

@@ -24,27 +24,31 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
   void _onLevelTap(int level) async {
     if (level == 3) {
       await _audioService.playAudio(AudioFiles.timeUp);
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => ThirdLevelPage(level: 3)),
-      );
-    } else {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) {
-          switch (level) {
-            case 1:
-              return FirstLevelPage(level: 1);
-            case 2:
-              return SecondLevelPage(level: 2);
-            case 4:
-              return LevelFourthDrawingScreen(level: 4);
-            default:
-              return LevelSelectionScreen();
-          }
-        }),
-      );
     }
+
+    Widget page;
+    switch (level) {
+      case 1:
+        page = FirstLevelPage(level: 1);
+        break;
+      case 2:
+        page = SecondLevelPage(level: 2);
+        break;
+      case 3:
+        page = ThirdLevelPage(level: 3);
+        break;
+      case 4:
+        page = LevelFourthDrawingScreen(level: 4);
+        break;
+      default:
+        page = LevelSelectionScreen();
+        break;
+    }
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => page),
+    );
   }
 
   @override
@@ -53,7 +57,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/2.png'),
                 fit: BoxFit.cover,
@@ -70,14 +74,14 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                         text: '1',
                         onTap: () => _onLevelTap(1),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       LevelButton(
                         text: '2',
                         onTap: () => _onLevelTap(2),
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -85,7 +89,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                         text: '3',
                         onTap: () => _onLevelTap(3),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       LevelButton(
                         text: '4',
                         onTap: () => _onLevelTap(4),
@@ -101,10 +105,10 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
             left: 0,
             right: 0,
             child: Container(
-              margin: EdgeInsets.only(top: 50),
+              margin: const EdgeInsets.only(top: 50),
               alignment: Alignment.center,
               height: MediaQuery.of(context).size.height * 0.5,
-              child: Column(
+              child: const Column(
                 children: [
                   Text(
                     "Seviyeni",

@@ -6,10 +6,10 @@ class LevelButton extends StatelessWidget {
   final VoidCallback onTap;
 
   const LevelButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class LevelButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: AppConstants.levelButtonFontSize,
             fontWeight: FontWeight.bold,
             color: Colors.white,
