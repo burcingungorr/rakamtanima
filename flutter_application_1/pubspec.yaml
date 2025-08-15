@@ -1,19 +1,26 @@
 name: flutter_application_1
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.4.1 <4.0.0'
+  sdk: ">=3.4.1 <4.0.0"
 
 dependencies:
-  audioplayers: ^6.0.0
   flutter:
     sdk: flutter
+
+  # Diğer paketler
+  audioplayers: ^6.0.0
   image: ^4.2.0
   image_picker: ^1.1.2
   signature: ^5.5.0
-  tflite_flutter: ^0.10.4
+
+  # TFLite Flutter: GitHub'dan en güncel sürüm
+  tflite_flutter:
+    git:
+      url: https://github.com/tensorflow/flutter-tflite.git
+      ref: main
 
 dev_dependencies:
   flutter_test:
